@@ -1,4 +1,4 @@
-//Sat Nov 09 2024 02:27:35 GMT+0000 (Coordinated Universal Time)
+//Sun Feb 16 2025 04:57:06 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 // 脚本来自 作者：@xzxxn777
