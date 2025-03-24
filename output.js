@@ -1,4 +1,4 @@
-//Sun Feb 16 2025 06:44:51 GMT+0000 (Coordinated Universal Time)
+//Mon Mar 24 2025 09:51:36 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 const $ = new Env("小蚕霸王餐");
