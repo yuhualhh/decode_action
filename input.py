@@ -1,43 +1,128 @@
-#   --------------------------------注释区--------------------------------
-#   入口https://s21.ax1x.com/2024/05/22/pkMb0gA.png
-#   变量:yuanshen_xcplus 多号： @分割
-#   找https://gwh.xiaocantech.com/rpc接口
-#   抓该接口请求头 x-vayne 和 x-teemo 和 x-sivir的值
-#   格式： x-vayne#x-teemo#x-sivir
-bug = False #是否卡平台bug刷取20次机会 True开启 False关闭
-#   --------------------------------一般不动区-------------------------------
-#                     _ooOoo_
-#                    o8888888o
-#                    88" . "88
-#                    (| -_- |)
-#                     O\ = /O
-#                 ____/`---'\____
-#               .   ' \\| |// `.
-#                / \\||| : |||// \
-#              / _||||| -:- |||||- \
-#                | | \\\ - /// | |
-#              | \_| ''\---/'' | |
-#               \ .-\__ `-` ___/-. /
-#            ___`. .' /--.--\ `. . __
-#         ."" '< `.___\_<|>_/___.' >'"".
-#        | | : `- \`.;`\ _ /`;.`/ - ` : | |
-#          \ \ `-. \_ __\ /__ _/ .-` / /
-#  ======`-.____`-.___\_____/___.-`____.-'======
-#                     `=---='
-# 
-#  .............................................
-#           佛祖保佑             永无BUG
-#           佛祖镇楼             BUG辟邪
-#佛曰:  
-#        写字楼里写字间，写字间里程序员；  
-#        程序人员写程序，又拿程序换酒钱。  
-#        酒醒只在网上坐，酒醉还来网下眠；  
-#        酒醉酒醒日复日，网上网下年复年。  
-#        但愿老死电脑间，不愿鞠躬老板前；  
-#        奔驰宝马贵者趣，公交自行程序员。  
-#        别人笑我忒疯癫，我笑自己命太贱；  
-#        不见满街漂亮妹，哪个归得程序员？
-#
-#   --------------------------------代码区--------------------------------
-import bz2, base64
-exec(bz2.decompress(base64.b64decode('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')))
+# [rule: ^(甬派.*|.*甬派)$]
+# 设置青龙容器
+# [param: {"required":true,"key":"Yzyxmm_yongpai_PluginsData.Qinglong","bool":false,"placeholder":"http://xxx.xx丨ClientID丨ClientSecret","name":"设置对接容器","desc":"你的变量需要添加到的容器？参数用丨分割，这个符号是中文的竖(直接复制)"}]
+# 青龙的变量名
+# [param: {"required":true,"key":"Yzyxmm_yongpai_PluginsData.EnvName","bool":false,"placeholder":"必填项,例:pangguai","name":"青龙变量名","desc":"青龙容器内甬派的变量名"}]
+# [param: {"required":true,"key":"Yzyxmm_yongpai_PluginsData.MonthlyFee","bool":false,"placeholder":"例:0.88,不填为0元","name":"上车价格","desc":"上车价格(单位:元)/月"}]
+# [param: {"required":true,"key":"Yzyxmm_yongpai_PluginsData.filespath","bool":false,"placeholder":"例：YongPai.json","name":"上车价格","desc":"运行记录文件在青龙中的路径，不填则无法查询"}]
+
+_OO00000O0000OOOOO ='暂未绑定甬派账号,发送‘甬派登录’进行绑定！'#line:4
+_OOOO000000OO0O0O0 ='Yzyxmm_yongpai_invalid'#line:5
+_O00OO0OO0O0000O00 ='Yzyxmm_yongpai_account'#line:6
+_OOOO0OOO00O0O0000 ='token'#line:7
+_OOOOOO000O00O00O0 =False #line:8
+_OO0OOO0O0OO0O0OOO ='账密无效'#line:9
+_O0O0OOO0OO00000OO ='Yzyxmm_yongpai_vip'#line:10
+_O0000OO0O00OO0O0O =True #line:11
+_OO0O0O0OO00OOO0O0 ='data'#line:12
+_O000OO0O0OOOOO00O ='Yzyxmm_yongpai_bind'#line:13
+_OO000O000000OO0O0 =None #line:14
+import json ,middleware ,hashlib ,requests #line:15
+from datetime import datetime #line:16
+import uuid ,time #line:17
+senderID =middleware .getSenderID ()#line:18
+sender =middleware .Sender (senderID )#line:19
+userid =sender .getUserID ()#line:20
+try :import Yzyxmm #line:21
+except Exception :sender .reply (f"未安装核心插件，请前往市场安装MaTrix后再试！");exit (0 )#line:22
+BasicInteraction =Yzyxmm .BasicInteraction ()#line:23
+payment =Yzyxmm .PaymentAPI ()#line:24
+AutService =Yzyxmm .AutPlugins ('甬派','Yzyxmm_yongpai_PluginsData',Container =_O0000OO0O00OO0O0O )#line:25
+PluginsDatas =AutService .GetPluginsDatas ()#line:26
+uservalue =middleware .bucketGet (bucket =_O000OO0O0OOOOO00O ,key =userid )#line:27
+usermessage =sender .getMessage ()#line:28
+today_time =str (datetime .now ().date ())#line:29
+imtype =sender .getImtype ()#line:30
+class Plugins :#line:31
+	def __init__ (O0OOOOO0000O0OOOO ):O0OOOOO0000O0OOOO .phone =_OO000O000000OO0O0 ;O0OOOOO0000O0OOOO .deviceId =str (uuid .uuid4 ());O0OOOOO0000O0OOOO .password =_OO000O000000OO0O0 ;O0OOOOO0000O0OOOO .userId =_OO000O000000OO0O0 ;O0OOOOO0000O0OOOO .AccountToken =_OO000O000000OO0O0 ;O0OOOOO0000O0OOOO .jwtToken =_OO000O000000OO0O0 ;O0OOOOO0000O0OOOO .account =_OO000O000000OO0O0 ;O0OOOOO0000O0OOOO .mobile =_OO000O000000OO0O0 #line:32
+	def BindAccount (OOOO000OOO00000OO ):#line:33
+		def O0OO00O00O00O0OO0 (O000OOOO0O0O00OO0 ):#line:34
+			if len (O00O0000O0OOOOO0O )!=0 and O00O0000O0OOOOO0O >=today_time :#line:35
+				AutService .AddEnvs (OO0OO0000O00O0OO0 ,OOOO000OOO00000OO .account ,f"{OO000OO0O0O0O0000}")#line:36
+				if O000OOOO0O0O00OO0 :O0O000O0O0OOOO0O0 .append (OOOO000OOO00000OO .account );sender .reply (f"🤪{OO000OO0O0O0O0000}添加账号成功！\n————————————————\n» 可发送‘甬派管理’进行管理！")#line:37
+				else :sender .reply (f"🤪{OO000OO0O0O0O0000}更新账号成功！\n————————————————\n» 可发送‘甬派管理’进行管理！")#line:38
+			elif O000OOOO0O0O00OO0 :O0O000O0O0OOOO0O0 .append (OOOO000OOO00000OO .account );sender .reply (f"🤪{OO000OO0O0O0O0000}添加账号成功！\n————————————————\n» 未授权发送‘甬派管理’进行授权！")#line:39
+			else :sender .reply (f"🤪{OO000OO0O0O0O0000}更新账号成功！\n————————————————\n» 授权过期发送‘甬派管理’进行续期！")#line:40
+			middleware .bucketSet (bucket =_O000OO0O0OOOOO00O ,key =userid ,value =f"{O0O000O0O0OOOO0O0}")#line:41
+		OOOO000OOO00000OO .phone =BasicInteraction .inputm ('请输入手机号：',long =11 );OOOO000OOO00000OO .password =BasicInteraction .inputm ('请输入密码：');O000OOOO0O00OO000 ,OO000O00OO0000000 =OOOO000OOO00000OO .login ()#line:42
+		if not O000OOOO0O00OO000 :sender .reply (f"登录失败：{OO000O00OO0000000}");return #line:43
+		OO0OOOOO0O0O000OO =BasicInteraction .inputm ('请输入支付宝手机或邮箱：');O000O0O00O0OO0OOO =BasicInteraction .inputm ('请输入支付宝实名：');OOOO000OOO00000OO .account =OOOO000OOO00000OO .phone ;OO000OO0O0O0O0000 =OOOO000OOO00000OO .account [:3 ]+'*'*4 +OOOO000OOO00000OO .account [7 :];OO0OO0000O00O0OO0 =f"{OOOO000OOO00000OO.phone}#{OOOO000OOO00000OO.password}#{OO0OOOOO0O0O000OO}#{O000O0O00O0OO0OOO}";middleware .bucketSet (bucket =_O00OO0OO0O0000O00 ,key =OOOO000OOO00000OO .account ,value =OO0OO0000O00O0OO0 );middleware .bucketSet (bucket =_OOOO000000OO0O0O0 ,key =OOOO000OOO00000OO .account ,value ='0');O00O0000O0OOOOO0O =middleware .bucketGet (bucket =_O0O0OOO0OO00000OO ,key =OOOO000OOO00000OO .account )#line:44
+		if len (uservalue )==0 :O0O000O0O0OOOO0O0 =[];O0OO00O00O00O0OO0 (_O0000OO0O00OO0O0O )#line:45
+		else :#line:46
+			O0O000O0O0OOOO0O0 =eval (uservalue )#line:47
+			if OOOO000OOO00000OO .account in O0O000O0O0OOOO0O0 :O0OO00O00O00O0OO0 (_OOOOOO000O00O00O0 )#line:48
+			else :O0OO00O00O00O0OO0 (_O0000OO0O00OO0O0O )#line:49
+	def login (O00OOOOOOOOOOOO00 ):#line:50
+		O0OOO00OO00OOOO0O =str (int (time .time ()*1000 ));OOO00000OOOOOO00O =hashlib .md5 (f"globalDatetime{O0OOO00OO00OOOO0O}username{O00OOOOOOOOOOOO00.phone}test_123456679890123456".encode ()).hexdigest ();O0OO0O00OO00O0000 =f"https://ypapp.cnnb.com.cn/yongpai-user/api/login2/local3?username={O00OOOOOOOOOOOO00.phone}&password={O00OOOOOOOOOOOO00.password}&deviceId={O00OOOOOOOOOOOO00.deviceId}&globalDatetime={O0OOO00OO00OOOO0O}&sign={OOO00000OOOOOO00O}";O00OO0OOOO0OOO0OO =requests .get (O0OO0O00OO00O0000 ).json ()#line:51
+		if O00OO0OOOO0OOO0OO .get ('code')==0 :O00OOOOOOOOOOOO00 .userId =O00OO0OOOO0OOO0OO .get (_OO0O0O0OO00OOO0O0 ).get ('userId');O00OOOOOOOOOOOO00 .AccountToken =O00OO0OOOO0OOO0OO .get (_OO0O0O0OO00OOO0O0 ).get (_OOOO0OOO00O0O0000 );O00OOOOOOOOOOOO00 .jwtToken =O00OO0OOOO0OOO0OO .get (_OO0O0O0OO00OOO0O0 ).get ('jwtToken');return _O0000OO0O00OO0O0O ,_OO000O000000OO0O0 #line:52
+		else :OOO0O00O0OO0O00O0 =O00OO0OOOO0OOO0OO .get ('message','未知错误');return _OOOOOO000O00O00O0 ,OOO0O00O0OO0O00O0 #line:53
+	def GetAccountMessage (O0OOO0O0O0OO000OO ):#line:54
+		OOO00OOO0O0O00000 =middleware .bucketGet (bucket =_O0O0OOO0OO00000OO ,key =O0OOO0O0O0OO000OO .account );O0OOO0O0O0OO000OO .token =middleware .bucketGet (bucket =_O00OO0OO0O0000O00 ,key =O0OOO0O0O0OO000OO .account );O0OOO0O0O0OO000OO .phone =O0OOO0O0O0OO000OO .token .split ('#')[0 ];O0OOO0O0O0OO000OO .password =O0OOO0O0O0OO000OO .token .split ('#')[1 ];O0OOO0O0O0OO000OO .mobile =O0OOO0O0O0OO000OO .phone [:3 ]+'*'*4 +O0OOO0O0O0OO000OO .phone [7 :];OO0OOO0OO0000O0OO =0 #line:55
+		if len (OOO00OOO0O0O00000 )==0 :OOO00OOO0O0O00000 ='未授权'#line:56
+		else :#line:57
+			OO0OOO0OO0000O0OO =AutService .DayCalculation (OOO00OOO0O0O00000 )#line:58
+			if OOO00OOO0O0O00000 <today_time :OOO00OOO0O0O00000 ='授权过期'#line:59
+		OOO0OO0O000O0OO00 ,O000OOOO0OO00O000 =O0OOO0O0O0OO000OO .login ()#line:60
+		if not OOO0OO0O000O0OO00 :O00O000OOOOO0O00O =_OO0OOO0O0OO0O0OOO #line:61
+		else :O00O000OOOOO0O00O ='状态正常'#line:62
+		return O00O000OOOOO0O00O ,OOO00OOO0O0O00000 ,OO0OOO0OO0000O0OO #line:63
+	def AccountManagement (O0O00O0O000O0O0O0 ):#line:64
+		if len (uservalue )==0 :AutService .ErrorMessage (_OO00000O0000OOOOO )#line:65
+		O0OO0O0OO0000O0OO =eval (uservalue );OO00O00OOOO00OO0O =0 ;OOOO0O0O00OOO0O0O =''#line:66
+		for O0O00O0O000O0O0O0 .account in O0OO0O0OO0000O0OO :O0O00OO00O0O0OO0O ,OOO00O00OO00OO00O ,O0OOOO00O0OO0OO0O =O0O00O0O000O0O0O0 .GetAccountMessage ();OO00O00OOOO00OO0O +=1 ;OOOO0O0O00OOO0O0O +=f"【{OO00O00OOOO00OO0O}】      ———\n🤪用户ID:{O0O00O0O000O0O0O0.mobile}\n🪫账号状态:{O0O00OO00O0O0OO0O}\n☁云授权:{OOO00O00OO00OO00O}\n"#line:67
+		OO0O0O0OO0OOOO00O =f"————《甬派管理》————\n{OOOO0O0O00OOO0O0O}";sender .reply (OO0O0O0OO0OOOO00O );O000O00O00OO00O00 =BasicInteraction .inputm (mes ='请输入【】中的数字序号进行管理：',count =OO00O00OOOO00OO0O );O0O00O0O000O0O0O0 .account =O0OO0O0OO0000O0OO [O000O00O00OO00O00 -1 ];O0O00OO00O0O0OO0O ,OOO00O00OO00OO00O ,O0OOOO00O0OO0OO0O =O0O00O0O000O0O0O0 .GetAccountMessage ();sender .reply (f"🤪用户ID:{O0O00O0O000O0O0O0.mobile}\n🪫账号状态:{O0O00OO00O0O0OO0O}\n☁云授权:{OOO00O00OO00OO00O}");O000O00O00OO00O00 =BasicInteraction .inputm (mes ='【1】丨续费授权\n【3】丨批量授权\n【3】丨删除账号',count =3 )#line:68
+		if O000O00O00OO00O00 ==1 :#line:69
+			if O0O00OO00O0O0OO0O ==_OO0OOO0O0OO0O0OOO :AutService .ErrorMessage ('账密无效,请重新登录！')#line:70
+			OOO00O00OO00OO00O ,O000O00O00OO00O00 ,O0O00000O00O0O0OO =AutService .empower (OOO00O00OO00OO00O );payment .pay (money =O0O00000O00O0O0OO ,project ='甬派授权',quantity =O000O00O00OO00O00 );middleware .bucketSet (bucket =_O0O0OOO0OO00000OO ,key =O0O00O0O000O0O0O0 .account ,value =OOO00O00OO00OO00O );AutService .AddEnvs (O0O00O0O000O0O0O0 .token ,O0O00O0O000O0O0O0 .account ,f"{O0O00O0O000O0O0O0.mobile}")#line:71
+		elif O000O00O00OO00O00 ==2 :#line:72
+			O000O00O00OO00O00 =BasicInteraction .inputm (mes ='请问您每个账号需要授权几个月？\n(只回复数字！)',count =99 );O0O00000O00O0O0OO =PluginsDatas .get ('MonthlyFee',0 );payment .pay (money =O0O00000O00O0O0OO ,project ='批量授权',quantity =O000O00O00OO00O00 *len (O0OO0O0OO0000O0OO ))#line:73
+			for O0O00O0O000O0O0O0 .account in O0OO0O0OO0000O0OO :O0O00OO00O0O0OO0O ,OOO00O00OO00OO00O ,O0OOOO00O0OO0OO0O =O0O00O0O000O0O0O0 .GetAccountMessage ();OOO00O00OO00OO00O ,O000O00O00OO00O00 ,O0O00000O00O0O0OO =AutService .empower (OOO00O00OO00OO00O ,inputs =_OOOOOO000O00O00O0 ,mes =O000O00O00OO00O00 );middleware .bucketSet (bucket =_O0O0OOO0OO00000OO ,key =O0O00O0O000O0O0O0 .account ,value =OOO00O00OO00OO00O );AutService .AddEnvs (O0O00O0O000O0O0O0 .token ,O0O00O0O000O0O0O0 .account ,O0O00O0O000O0O0O0 .mobile )#line:74
+		elif O000O00O00OO00O00 ==3 :#line:75
+			if BasicInteraction .SingleChoiceQuestion (Content ='确定要删除该账号吗？',Choose1 ='是',Choose2 ='否'):#line:76
+				AutService .DelEnvs (O0O00O0O000O0O0O0 .account );O0OO0O0OO0000O0OO .remove (O0O00O0O000O0O0O0 .account )#line:77
+				if len (O0OO0O0OO0000O0OO )==0 :middleware .bucketDel (bucket =_O000OO0O0OOOOO00O ,key =userid )#line:78
+				else :middleware .bucketSet (bucket =_O000OO0O0OOOOO00O ,key =userid ,value =f"{O0OO0O0OO0000O0OO}")#line:79
+				sender .reply ('删除完成！');exit (0 )#line:80
+	def qltoken (O0O00O00000OO0000 ):#line:81
+		O0O0OO0OOO0OOOO0O =PluginsDatas .get ('Qinglong');O0OO0OO000O00O0O0 =['丨','|','#','＃'];O0000OOO00O0OOO00 =next ((O0000OOOOOOO0000O for O0000OOOOOOO0000O in O0OO0OO000O00O0O0 if O0000OOOOOOO0000O in O0O0OO0OOO0OOOO0O ),_OO000O000000OO0O0 )#line:82
+		if O0000OOO00O0OOO00 :O0OOOO0O00000OO0O =O0O0OO0OOO0OOOO0O .split (O0000OOO00O0OOO00 );O0O00O00000OO0000 .QLurl ,O0O00O00000OO0000 .ClientID ,O0O00O00000OO0000 .ClientSecret =O0OOOO0O00000OO0O [0 ],O0OOOO0O00000OO0O [1 ],O0OOOO0O00000OO0O [2 ]#line:83
+		else :AutService .ErrorMessage ('青龙面板配置有误！')#line:84
+		O000OO000O0O0O0O0 =f"{O0O00O00000OO0000.QLurl}/open/auth/token?client_id={O0O00O00000OO0000.ClientID}&client_secret={O0O00O00000OO0000.ClientSecret}";O00O000O0OO0O0000 =requests .get (O000OO000O0O0O0O0 )#line:85
+		if _OOOO0OOO00O0O0000 in O00O000O0OO0O0000 .text :O0O0OO0OOO0OOOO0O =O00O000O0OO0O0000 .json ();O0O00O00000OO0000 .qltoken =O0O0OO0OOO0OOOO0O [_OO0O0O0OO00OOO0O0 ][_OOOO0OOO00O0O0000 ]#line:86
+		else :AutService .ErrorMessage ('青龙面板token获取失败！')#line:87
+	def lookfiles (OOOO000000O0OOOOO ):#line:88
+		OOOO000000O0OOOOO .qltoken ();OOOO000000O0OOOOO .filespath =PluginsDatas .get ('filespath')#line:89
+		if '/'in OOOO000000O0OOOOO .filespath :OOOO0O0OOOO00O000 =OOOO000000O0OOOOO .filespath .split ('/');OO0OO0OO00OOOO0OO =OOOO0O0OOOO00O000 [0 ];OOO000O0000000O00 =OOOO0O0OOOO00O000 [1 ]#line:90
+		else :OO0OO0OO00OOOO0OO ='';OOO000O0000000O00 =OOOO000000O0OOOOO .filespath #line:91
+		O000O0000OO00OOO0 =f"{OOOO000000O0OOOOO.QLurl}/open/scripts/{OOO000O0000000O00}";O0O000OO0O0O0O0O0 ={'accept':'application/json','Authorization':'Bearer '+OOOO000000O0OOOOO .qltoken };O00OOOO0O00O000OO =requests .get (O000O0000OO00OOO0 ,headers =O0O000OO0O0O0O0O0 ,params ={'path':f"{OO0OO0OO00OOOO0OO}"});O00000O0O000O000O =O00OOOO0O00O000OO .json ()#line:92
+		if O00000O0O000O000O ['code']==200 :#line:93
+			try :OOOO000000O0OOOOO .QueryData =json .loads (O00000O0O000O000O [_OO0O0O0OO00OOO0O0 ])#line:94
+			except Exception :AutService .ErrorMessage ('青龙面板查询文件格式有误！')#line:95
+		else :AutService .ErrorMessage ('获取青龙面板查询文件失败！')#line:96
+	def Query (O0000O0OO0O000000 ):#line:97
+		O00O0OOOO000OO00O ='无数据';O0000O0OO0O000000 .lookfiles ();OO0OOO0OOOO00OOOO =O0000O0OO0O000000 .QueryData .get (O0000O0OO0O000000 .account )#line:98
+		if OO0OOO0OOOO00OOOO is _OO000O000000OO0O0 :O0000O0OO0O000000 .TodayMone =O00O0OOOO000OO00O ;O0000O0OO0O000000 .CumulativeMoey =O00O0OOOO000OO00O #line:99
+		else :O0000O0OO0O000000 .TodayMone =OO0OOO0OOOO00OOOO .get ('TodayMone');O0000O0OO0O000000 .CumulativeMoey =OO0OOO0OOOO00OOOO .get ('CumulativeMoey')#line:100
+	def Querys (O0OO0O0O00O000OO0 ):#line:101
+		if len (uservalue )==0 :AutService .ErrorMessage (_OO00000O0000OOOOO )#line:102
+		sender .reply ('正在查询....');OO0O000O0OOOO0OOO =eval (uservalue )#line:103
+		for O0OO0O0O00O000OO0 .account in OO0O000O0OOOO0OOO :#line:104
+			OO0OO0OO0O0000OOO ,O00OOOOOO00O0O0O0 ,OO0O0OOO0O00OOOO0 =O0OO0O0O00O000OO0 .GetAccountMessage ()#line:105
+			if O00OOOOOO00O0O0O0 in ['未授权','授权过期']:sender .reply (f"【{O0OO0O0O00O000OO0.mobile}】{O00OOOOOO00O0O0O0}")#line:106
+			elif OO0OO0OO0O0000OOO ==_OO0OOO0O0OO0O0OOO :sender .reply (f"【{O0OO0O0O00O000OO0.mobile}】{OO0OO0OO0O0000OOO}")#line:107
+			else :O0OO0O0O00O000OO0 .Query ();O0000OOOOOOO000OO =f"🤪用户ID:{O0OO0O0O00O000OO0.mobile}\n💰今日金额:{O0OO0O0O00O000OO0.TodayMone}元\n📒累计金额:{O0OO0O0O00O000OO0.CumulativeMoey}元\n☁️剩余授权:{OO0O0OOO0O00OOOO0}天";sender .reply (O0000OOOOOOO000OO )#line:108
+	def CronTask (OO000O0000OO00O0O ):#line:109
+		O0OO00OO0O0000O00 =middleware .bucketAllKeys (bucket =_O000OO0O0OOOOO00O )#line:110
+		for O000OO0OO000OOOO0 in O0OO00OO0O0000O00 :#line:111
+			OO000O0O0O0O00O00 =middleware .bucketGet (bucket =_O000OO0O0OOOOO00O ,key =O000OO0OO000OOOO0 );O00O0OOOO0O000OO0 =eval (OO000O0O0O0O00O00 )#line:112
+			for OO000O0000OO00O0O .account in O00O0OOOO0O000OO0 :#line:113
+				OOO00O0OOOOOO0O0O ,OO000OO00000000O0 ,O000OOO0O0OOO0OOO =OO000O0000OO00O0O .GetAccountMessage ()#line:114
+				if OOO00O0OOOOOO0O0O ==_OO0OOO0O0OO0O0OOO :OOO00O0OOOOOO0O0O ='Token失效'#line:115
+				O0O0O00OOOOO00OO0 =BasicInteraction .CronPush (acs =OOO00O0OOOOOO0O0O ,user =O000OO0OO000OOOO0 ,account =OO000O0000OO00O0O .account ,accountVip =OO000OO00000000O0 ,RemainingDays =O000OOO0O0OOO0OOO ,InvalidBucket =_OOOO000000OO0O0O0 ,VipoverMes =f"🔔{OO000O0000OO00O0O.mobile}甬派云授权过期，请及时发送‘甬派管理’续费！",TokenoverMes =f"🔔{OO000O0000OO00O0O.mobile}顺丰账密无效，请及时发送‘甬派登录’进行更新！")#line:116
+				if O0O0O00OOOOO00OO0 :AutService .DelEnvs (OO000O0000OO00O0O .account )#line:117
+	def main (OO000OO0OO0O0000O ):#line:118
+		if '登录'in usermessage or '登陆'in usermessage :OO000OO0OO0O0000O .BindAccount ()#line:119
+		elif '管理'in usermessage :OO000OO0OO0O0000O .AccountManagement ()#line:120
+		elif '查询'in usermessage :OO000OO0OO0O0000O .Querys ()#line:121
+		elif imtype =='fake':OO000OO0OO0O0000O .CronTask ()#line:122
+if __name__ =='__main__':Plugins ().main ()
